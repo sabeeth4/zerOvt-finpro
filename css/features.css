@@ -125,7 +125,7 @@ img { display: block; }
 .breathe-text {
   margin-top: 0.85rem;
   font-family: 'Outfit', 'Poppins', sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   line-height: 1.2;
   color: var(--text-color);
@@ -147,7 +147,8 @@ img { display: block; }
   height: 1.75rem;
   margin-left: -3.4rem;
   border-radius: 1rem;
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   font-weight: 500;
   gap: 0.4rem;
+  margin-top: 2rem;
 }
