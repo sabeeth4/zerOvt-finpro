@@ -4,228 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zero Pace</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <style>
-/* ===== VARIABLES ===== */
-:root {
-  /* Main colors */
-  --color-red:    #FF5344;
-  --color-blue:   #48A0F9;
-  --color-pink:   #FE6EA6;
-  --color-green:  #02C927;
-  --color-yellow: #FFB72A;
-
-  /* Text */
-  --text-color: #2B2B34;
-
-  /* Breathe circle */
-  --ring-outer:  #D7E8FC;
-  --ring-border: #B5D3F7;
-  --ring-inner:  #F1F6FE;
-}
-
-/* ===== RESET ===== */
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* ===== UKURAN DASAR =====
-   Desain acuan 864 x 562 px = 54 x 35.125 rem.
-   1rem dipilih dari sisi layar yang paling "sempit", jadi seluruh desain
-   selalu muat di satu layar (tanpa scroll). Angka 22px = batas ukuran maksimal. */
-html {
-  font-size: min(calc(100vw / 54), calc(100vh / 35.125), 22px);
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;          /* tidak bisa scroll */
-}
-
-body {
-  display: flex;
-  align-items: center;       /* stage di tengah layar secara vertikal */
-  font-family: 'Poppins', sans-serif;
-  background: #fff;
-  color: var(--text-color);
-}
-
-img { display: block; }
-
-/* ===== STAGE ===== */
-.stage {
-  position: relative;
-  width: 100vw;
-  height: 35.125rem;
-  overflow: hidden;
-  background: #fff;
-}
-
-/* ===== BUTTON ===== */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  border: 0;
-  cursor: pointer;
-  font-family: inherit;
-  transition: transform .15s ease, background .2s ease;
-}
-.btn-dark       { background: var(--text-color); color: #fff; }
-.btn-dark:hover { background: #1b1c22; }
-.btn:active     { transform: scale(.97); }
-
-/* ===== AWAN (gambar) ===== */
-.clouds {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-}
-.Cloud-pace {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 23.2rem;
-  object-fit: fill;
-}
-
-/* ===== KARAKTER =====
-   Posisi = titik tengah karakter (left / top), lalu digeser setengah ukurannya. */
-.char {
-  position: absolute;
-  z-index: 3;
-  object-fit: contain;
-  transform: translate(-50%, -50%);
-}
-.char-yellow { left: 22.3%; top: 12.2rem; width: 6.75rem; height: 6.75rem; }
-.char-Blue   { left: 87%;   top: 12rem;   width: 7.1rem;  height: 4.25rem; }
-.char-Red    { left: 15.2%; top: 24.4rem; width: 6.7rem;  height: 6.8rem;  }
-.char-Green  { left: 77.7%; top: 20.6rem; width: 5rem;    height: 4.85rem; }
-.char-Pink   { left: 87.8%; top: 28.3rem; width: 5.05rem; height: 3.2rem;  }
-
-/* ===== LINGKARAN NAPAS ===== */
-.breathe {
-  position: absolute;
-  left: 50%;
-  top: 12rem;
-  z-index: 4;
-  width: 11.8rem;
-  height: 11.8rem;
-  margin-left: -5.9rem;
-}
-.breathe-ring {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: var(--ring-outer);
-}
-.breathe-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 10.3rem;
-  height: 10.3rem;
-  border: 0.45rem solid var(--ring-border);
-  border-radius: 50%;
-  background: var(--ring-inner);
-}
-.breathe-mascot {
-  width: 5.95rem;
-  height: 3.4rem;
-  margin-top: 2.1rem;
-  object-fit: contain;
-}
-.breathe-mascot[src=""] { visibility: hidden; } /* sembunyikan ikon rusak kalau src masih kosong */
-.breathe-text {
-  margin-top: 0.85rem;
-  font-family: 'Outfit', 'Poppins', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  line-height: 1.2;
-  color: var(--text-color);
-}
-.breathe-dots {
-  font-family: 'Outfit', 'Poppins', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: .6;
-  color: var(--text-color);
-}
-
-/* ===== TOMBOL START EXERCISE ===== */
-.btn-exercise {
-  position: absolute;
-  left: 50%;
-  top: 25.4rem;
-  z-index: 5;
-  width: 6.8rem;
-  height: 1.75rem;
-  margin-left: -3.4rem;
-  border-radius: 1rem;
-  font-size: 0.65rem;
-  font-weight: 500;
-  gap: 0.4rem;
-}
-
-/* ikon play (segitiga CSS) */
-.icon-play {
-  width: 0;
-  height: 0;
-  border-top: 0.32rem solid transparent;
-  border-bottom: 0.32rem solid transparent;
-  border-left: 0.55rem solid currentColor;
-  border-radius: 0.1rem;
-}
-
-  </style>
-</head>
+  <link rel="stylesheet" href="css/features.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+  </head>
 <body>
-
-  <main class="stage">
-
-    <!-- Awan (background bawah) -->
-    <div class="clouds" aria-hidden="true">
-      <img class="Cloud-pace" src="assets/Cloud-pace.png" alt="Cloud Background">
-    </div>
-
-    <!-- Karakter -->
-    <img class="char char-yellow" src="assets/Calm.png"        alt="Calm">
-    <img class="char char-Green"  src="assets/Anxious.png"     alt="Anxious">
-    <img class="char char-Pink"   src="assets/Overwhelm.png"   alt="Overwhelm">
-    <img class="char char-Blue"   src="assets/Heavy.png"       alt="Heavy">
-    <img class="char char-Red"    src="assets/Overthinking.png" alt="Overthinking">
-
-    <!-- Lingkaran napas -->
-    <section class="breathe" id="home">
-      <div class="breathe-ring">
-        <div class="breathe-inner">
-          <img class="breathe-mascot" src="" alt="">
-          <h2 class="breathe-text">Breathe In</h2>
-          <span class="breathe-dots">...</span>
+    <main class="stage">
+        <!-- bg bawah -->
+        <div class="clouds" aria-hidden="true">
+        <img class="Cloud-pace" src="assets/Cloud-pace.png" alt="Cloud Background">
         </div>
-      </div>
-    </section>
 
-    <!-- Tombol -->
-    <button class="btn btn-dark btn-exercise" type="button">
-      <span class="icon-play" aria-hidden="true"></span>
-      Start Exercise
-    </button>
+        <!-- char -->
+        <img class="char char-yellow" src="assets/Calm.png"        alt="Calm">
+        <img class="char char-Green"  src="assets/Anxious.png"     alt="Anxious">
+        <img class="char char-Pink"   src="assets/Overwhelm.png"   alt="Overwhelm">
+        <img class="char char-Blue"   src="assets/Heavy.png"       alt="Heavy">
+        <img class="char char-Red"    src="assets/Overthinking.png" alt="Overthinking">
 
-  </main>
+        <section class="breathe" id="home">
+        <div class="breathe-ring" id="outer-circle">
+            <div class="breathe-inner">
+            <img class="breathe-mascot" src="" alt="">
+            <h2 class="breathe-text" id="breathe-text">Breathe In</h2>
+            <span class="breathe-dots">...</span>
+            </div>
+        </div>
+        </section>
+        <button class="btn btn-dark btn-exercise" id="start-btn" type="button">
+            <i class="ri-play-fill"></i>
+            Start Exercise
+        </button>
+
+    </main>
 
 </body>
 </html>
