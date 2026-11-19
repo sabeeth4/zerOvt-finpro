@@ -4,99 +4,219 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZerOvt - no thoughts, just vibe.</title>
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/landing.css">
-    <!-- google fonts -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navbar -->
     <header class="navbar">
-        <a href="#home" class="nav-brand">
-            <img src="assets/logo.png" alt="">
-            <span class="logo-text">zerOvt</span>
-        </a>
+    <a href="#home" class="nav-logo">
+        <img src="assets/logo.png" alt="zerOvt logo">
+        <span>zerOvt</span>
+    </a>
 
-        <nav class="nav-menu">
-            <a href="#home" class="nav-link">home</a>
-            <a href="#about" class="nav-link">about</a>
-            <a href="#features" class="nav-link">feature</a>
-            <a href="#faq" class="nav-link">FAQ</a>
-        </nav>
-        
-        <div class="nav-action">
-          <button type="button" class="btn-get-started" onclick="location.href='#features'">get started</button>
+    <nav class="nav-links">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#features">feature</a>
+        <a href="#faq">FAQ</a>
+    </nav>
+
+    <a href="#about" class="nav-cta">get started</a>
+</header>
+
+<!-- Section 1: hero -->
+<section id="home" class="hero-section">
+
+    <div class="hero-content">
+        <h1 class="hero-title">
+            <span class="line">
+                <span class="text-yellow">how</span> <span class="text-green">are</span>
+            </span>
+            <span class="line">
+                <span class="text-blue">you</span> <span class="text-pink">today?</span>
+            </span>
+        </h1>
+
+        <div class="hero-buttons">
+            <a href="#about" class="btn-primary">Clear my mind <span class="btn-arrow">→</span></a>
+            <a href="#about" class="btn-secondary">How it works →</a>
         </div>
-    </header>
-    <!-- Main content -->
-     <main>
+    </div>
 
-        <!-- section slide 1; hero -->
-         <section id="home" class="Hero-section">
-           <h1 class="Hero-title">
-            <span class="text-orange">how</span>
-            <span class="text-green">are</span><br>
-            <span class="text-blue">you</span>
-            <span class="text-pink">today?</span>
-           </h1>
+    <div class="hero-visual">
+        <img src="assets/awanbiru.png" alt="" class="hv-cloud-back">
 
-           <div class="Heo-buttons">
-            <button type="button" class="btn-primary">Clear my mind</button>
-            <button type="button" class="btn-secondary">How it works →</button>
-           </div>
+        <img src="assets/z(1).png" alt="" class="hv-z hv-z1">
+        <img src="assets/z(2).png" alt="" class="hv-z hv-z2">
+         <!-- animasi2 -->
+        <img src="assets/Calm.png" alt="" class="hv-char hv-yellow">
+        <img src="assets/Heavy.png" alt="" class="hv-char hv-blue">
+        <img src="assets/Overthinking.png" alt="" class="hv-char hv-red">
+        <img src="assets/Anxious.png" alt="" class="hv-char hv-green">
+        <img src="assets/Overwhelm.png" alt="" class="hv-char hv-pink">
+        <img src="assets/awanputih.png" alt="" class="hv-cloud-front">
+    </div>
 
-           <!-- wadah ilustrasi -->
-            <div class="Hero-visual">
-             
-                <div class="Hero-visual">
-                    <!-- Awan -->
-                    <img src="assets/awanbiru.png"
-                        alt="" class="cloud-img cloud-back">
+</section>
+        
+       <!-- Section 2: about -->
+      <section id="about" class="about-section">
+            <div class="about-container">
 
-                    <img src="assets/awanputih.png"
-                        alt="" class="cloud-img cloud-front">
+                <!-- bagian kiri -->
+                <div class="about-content">
 
-                    <!-- Karakter -->
-                    <img src="assets/Overthinking.png"
-                        alt="" class="hero-char char-red">
+                    <h2 class="about-title">
+                        <span class="about-word">
+                            <span class="text-orange">a</span><span class="text-green">b</span><span class="text-blue">o</span><span class="text-pink">u</span><span class="text-red">t</span>
+                        </span>
+                        <span class="about-brand">zerOvt</span>
+                    </h2>
 
-                    <img src="assets/Calm.png"
-                        alt="" class="hero-char char-yellow">
+                    <p class="about-desc">
+                        zerovt is your pocket-sized reset button for whenever life gets a little too loud. No sign-ups, no boring rules—just check your vibe, dump your thoughts, catch your breath, and tune out to good sounds.
+                    </p>
 
-                    <img src="assets/Anxious.png"
-                        alt="" class="hero-char char-green">
+                    <!-- karakter -->
+                    <div class="about-chars">
+                        <img src="assets/Overwhelm.png" alt="" class="mini-char mc-pink">
+                        <img src="assets/Heavy.png" alt="" class="mini-char mc-blue">
+                        <img src="assets/Anxious.png" alt="" class="mini-char mc-green">
+                        <img src="assets/Calm.png" alt="" class="mini-char mc-yellow">
+                        <img src="assets/Overthinking.png" alt="" class="mini-char mc-red">
+                    </div>
 
-                    <img src="assets/Overwhelm.png"
-                        alt="" class="hero-char char-pink">
+                </div>
 
-                    <img src="assets/Heavy.png"
-                        alt="" class="hero-char char-blue">
+                <!-- bagian kanan -->
+                <div class="about-right">
 
-                    <!-- Zzz -->
-                    <img src="assets/z 1.png"
-                        alt="" class="zzz1">
+                    <div id="features" class="envelope-visual">
 
-                    <img src="assets/z (2).png"
-                        alt="" class="zzz2">
-               </div>
+                        <img src="assets/amplop.png" alt="" class="envelope-img">
+
+                        <a href="mood.html" class="feature-pill pill-1">1. Mood Checker</a>
+                        <a href="thoughts.html" class="feature-pill pill-2">2. Zero Thoughts</a>
+                        <a href="pace.html" class="feature-pill pill-3">3. Zero Pace</a>
+                        <a href="noise.html" class="feature-pill pill-4">4. Zero Noise</a>
+
+                    </div>
+
+                </div>
 
             </div>
-         </section> 
-         <!-- section 2 -->
-          <section id="about" class="about-section">
-            <div class="about-content">
-                <h2 class="about-title">
-                    <span class="about-word">
-                        <span class="text-orange">a</span><span class="text-green">b</span><span class="text-blue">o</span><span class="text-pink">u</span><span class="text-red">t</span>
-                    </span>
-                    <span class="about-brand">zerOvt</span>
+        </section>
+    
+           <!-- Section 3: FAQ -->
+            <section id="faq" class="faq-section">
+                <div class="faq-container">
+
+                    <!-- Bagian Kiri: Judul & Grup Karakter -->
+                    <div class="faq-left">
+                        <h2 class="faq-title">
+                            <span class="text-yellow">F</span><span class="text-green">A</span><span class="text-blue">Q</span><span class="text-pink">'s</span>
+                        </h2>
+
+                        <img src="assets/FAQ.png" alt="zerOvt characters" class="faq-chars-group">
+                    </div>
+
+                    <!-- Bagian Kanan: List FAQ + Kotak Jawaban -->
+                    <div class="faq-right">
+
+                        <details class="faq-item faq-yellow">
+                            <summary class="faq-question">
+                                <span></span>
+                                <span class="faq-chevron"></span>
+                            </summary>
+                        </details>
+
+                        <details class="faq-item faq-green">
+                            <summary class="faq-question">
+                                <span></span>
+                                <span class="faq-chevron"></span>
+                            </summary>
+                        </details>
+
+                        <details class="faq-item faq-blue">
+                            <summary class="faq-question">
+                                <span></span>
+                                <span class="faq-chevron"></span>
+                            </summary>
+                        </details>
+
+                        <details class="faq-item faq-red">
+                            <summary class="faq-question">
+                                <span></span>
+                                <span class="faq-chevron"></span>
+                            </summary>
+                        </details>
+
+                        <!-- Kotak biru muda di bagian bawah -->
+                        <div class="faq-answer-box"></div>
+                   </div>
+                </div>
+            </section>
+            <!-- section 4 -->
+             <!-- Section Penutup: no thoughts, just vibes. -->
+            <section class="vibe-banner-section">
+                <h2 class="vibe-banner-title">
+                    <span class="text-yellow">n</span><span class="text-green">o</span>
+                    <span class="text-pink">t</span><span class="text-blue">h</span><span class="text-red">o</span><span class="text-yellow">u</span><span class="text-green">g</span><span class="text-pink">h</span><span class="text-blue">t</span><span class="text-red">s</span><span class="vibe-banner-punct">,</span>
+                    <span class="text-yellow">j</span><span class="text-green">u</span><span class="text-pink">s</span><span class="text-blue">t</span>
+                    <span class="text-red">v</span><span class="text-yellow">i</span><span class="text-green">b</span><span class="text-pink">e</span><span class="text-blue">s</span><span class="vibe-banner-punct">.</span>
                 </h2>
-                 <p class="about-desc">
-                    zerovt is your pocket-sized reset button for whenever life gets a little too loud. No sign-ups, no boring rules—just check your vibe, dump your thoughts, catch your breath, and tune out to good sounds.
-                </p>
-            </div>
-          </section>
+           </section>
+           <!-- FOOTER zerOVT -->
+       <footer class="site-footer">
+            <div class="footer-container">
 
-     </main>
+                <!-- Kolom 1: Brand & Deskripsi -->
+                <div class="footer-brand">
+                    <a href="#home" class="footer-logo-wrap">
+                        <img src="assets/zerOvt.png" alt="zerOvt mascot" class="footer-mascot">
+                    </a>
+                    <p class="footer-desc">
+                        zerOvt hadir untuk menemani langkah kecilmu menenangkan pikiran, melepas penat, dan kembali ke vibe terbaikmu.
+                    </p>
+                </div>
+
+                <!-- Kolom 2 -->
+                <div class="footer-col">
+                    <h3 class="footer-heading">zerOvt</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#features">Features</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kolom 3 -->
+                <div class="footer-col">
+                    <h3 class="footer-heading">Information</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">How It Works</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#about">Get Started</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kolom 4 -->
+                <div class="footer-col">
+                    <h3 class="footer-heading">Follow Us</h3>
+                    <a href="#" class="footer-social-pill">@zerovt.id</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2026 zerOvt. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </footer>
+    </main>
 </body>
+</html>
