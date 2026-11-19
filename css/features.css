@@ -1,16 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
-  /* Main colors */
-  --color-red:    #FF5344;
-  --color-blue:   #48A0F9;
-  --color-pink:   #FE6EA6;
-  --color-green:  #02C927;
-  --color-yellow: #FFB72A;
-  --bg-color: #fff;
-
-  /* Text */
-  --text-color: #2B2B34;
-
   /* Breathe circle */
   --ring-outer:  #D7E8FC;
   --ring-border: #B5D3F7;
@@ -37,6 +25,8 @@ body {
   color: var(--text-color);
 }
 
+/* BREATHE FITUR */
+
 img { display: block; }
 
 .stage {
@@ -61,71 +51,60 @@ img { display: block; }
 .btn-dark:hover { background: #1b1c22; }
 .btn:active     { transform: scale(.97); }
 
-.clouds {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-}
-.Cloud-pace {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 23.2rem;
-  object-fit: fill;
-}
-
 .char {
   position: absolute;
   z-index: 3;
   object-fit: contain;
   transform: translate(-50%, -50%);
 }
-.char-yellow { left: 22.3%; top: 12.2rem; width: 6.75rem; height: 6.75rem; }
-.char-Blue   { left: 87%;   top: 12rem;   width: 7.1rem;  height: 4.25rem; }
-.char-Red    { left: 15.2%; top: 24.4rem; width: 6.7rem;  height: 6.8rem;  }
-.char-Green  { left: 77.7%; top: 20.6rem; width: 5rem;    height: 4.85rem; }
-.char-Pink   { left: 87.8%; top: 28.3rem; width: 5.05rem; height: 3.2rem;  }
-
+.char-yellow { left: 20%; top: 9.2rem;  width: 9rem;  height: 9rem; }
+.char-Blue   { left: 80%; top: 9rem;  width: 12rem;  height: 10rem; }
+.char-Red    { left: 9%;  top: 24rem; width: 12rem;  height: 12rem; }
+.char-Green  { left: 25%; top: 31rem; width: 7rem; height: 7.25rem; }
+.char-Pink   { left: 86%; top: 22rem; width: 11rem;  height: 8rem; }
 .breathe {
   position: absolute;
   left: 50%;
-  top: 12rem;
+  top: 6.5rem;
   z-index: 4;
-  width: 11.8rem;
-  height: 11.8rem;
-  margin-left: -5.9rem;
+  width: 19rem;
+  height: 19rem;
+  margin-left: -9.5rem;
 }
 .breathe-ring {
+  width: 19rem;       
+  height: 19rem;
+  aspect-ratio: 1 / 1; 
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
   border-radius: 50%;
   background: var(--ring-outer);
 }
 .breathe-inner {
+  width: 15rem;
+  height: 15rem;
+  flex-shrink: 0;     
+  box-sizing: border-box;
+  border: 0.6rem solid var(--ring-border);
+  border-radius: 50%;
+  background: var(--ring-inner);
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 10.3rem;
-  height: 10.3rem;
-  border: 0.45rem solid var(--ring-border);
-  border-radius: 50%;
-  background: var(--ring-inner);
+  justify-content: center;
 }
 .breathe-mascot {
-  width: 5.95rem;
-  height: 3.4rem;
-  margin-top: 2.1rem;
+  width: 8.7rem;
+  height: 5rem;
+  margin-top: 0;       
   object-fit: contain;
 }
 .breathe-text {
   margin-top: 0.85rem;
   font-family: 'Outfit', 'Poppins', sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.4rem;
   font-weight: 600;
   line-height: 1.2;
   color: var(--text-color);
@@ -141,14 +120,12 @@ img { display: block; }
 .btn-exercise {
   position: absolute;
   left: 50%;
-  top: 25.4rem;
+  top: 30rem;
   z-index: 5;
-  width: 6.8rem;
-  height: 1.75rem;
-  margin-left: -3.4rem;
-  border-radius: 1rem;
-  font-size: 0.7rem;
+  width: 8.5rem;
+  height: 2.7rem;
+  margin-left: -4.25rem;
+  border-radius: 1.1rem;
+  font-size: 0.8rem;
   font-weight: 500;
-  gap: 0.4rem;
-  margin-top: 2rem;
 }

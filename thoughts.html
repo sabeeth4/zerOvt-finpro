@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id" class="page-thoughts">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZerOvt | Thought</title>
+
+   <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/thoughts.css">
+</head>
+<body>
+
+  <main class="stage">
+
+    <!-- Judul + deskripsi -->
+    <h1 class="title">Zero-thought</h1>
+    <p class="desc">
+      Dump all the random scenarios spinning in your head right now. No filter needed :)
+    </p>
+
+    <!-- Kotak tulisan -->
+    <section class="note">
+      <textarea class="note-input" id="thought" maxlength="300" spellcheck="false" aria-label="Tulis pikiranmu di sini"></textarea>
+      <span class="note-count" id="count">000/300</span>
+    </section>
+
+    <button class="btn btn-finish" type="button">Finish</button>
+
+    <!-- Karakter -->
+    <img class="char-thoughts char-Blue-thoughts"   src="assets/Heavy.png"        alt="Heavy">
+    <img class="char-thoughts char-Red-thoughts"    src="assets/Overthinking.png" alt="Overthinking">
+    <img class="char-thoughts char-Green-thoughts"  src="assets/Anxious.png"      alt="Anxious">
+    <img class="char-thoughts char-yellow-thoughts" src="assets/Calm.png"         alt="Calm">
+    <img class="char-thoughts char-Pink-thoughts"   src="assets/Overwhelm.png"    alt="Overwhelm">
+
+        <!-- cloud -->
+    <div class="clouds" aria-hidden="true">
+      <img class="cloud-img" src="assets/cloud-thought.png" alt="">
+    </div>
+
+  </main>
+
+  <script>
+    // hitung jumlah huruf: 000/300
+    const input = document.getElementById('thought');
+    const count = document.getElementById('count');
+
+    function updateCount() {
+      count.textContent = String(input.value.length).padStart(3, '0') + '/300';
+    }
+    input.addEventListener('input', updateCount);
+    updateCount();
+  </script>
+
+</body>
+</html>

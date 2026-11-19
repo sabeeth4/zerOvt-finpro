@@ -1,0 +1,708 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+:root {
+
+  /* Breathe circle */
+  --ring-outer:  #D7E8FC;
+  --ring-border: #B5D3F7;
+  --ring-inner:  #F1F6FE;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;          
+}
+
+body {
+  display: flex;
+  align-items: center;      
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+img { display: block; }
+
+.stage {
+  position: relative;
+  width: 100vw;
+  height: 35.125rem;
+  overflow: hidden;
+  background: var(--bg-color);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform .15s ease;
+}
+.btn-dark       { background: var(--text-color); color: var(--bg-color); }
+.btn-dark:hover { background: #1b1c22; }
+.btn:active     { transform: scale(.97); }
+
+.clouds {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.Cloud-pace {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 23.2rem;
+  object-fit: fill;
+}
+
+.char {
+  position: absolute;
+  z-index: 3;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+}
+.char-yellow { left: 22.3%; top: 12.2rem; width: 6.75rem; height: 6.75rem; }
+.char-Blue   { left: 87%;   top: 12rem;   width: 7.1rem;  height: 4.25rem; }
+.char-Red    { left: 15.2%; top: 24.4rem; width: 6.7rem;  height: 6.8rem;  }
+.char-Green  { left: 77.7%; top: 20.6rem; width: 5rem;    height: 4.85rem; }
+.char-Pink   { left: 87.8%; top: 28.3rem; width: 5.05rem; height: 3.2rem;  }
+
+.breathe {
+  position: absolute;
+  left: 50%;
+  top: 12rem;
+  z-index: 4;
+  width: 11.8rem;
+  height: 11.8rem;
+  margin-left: -5.9rem;
+}
+.breathe-ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--ring-outer);
+}
+.breathe-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10.3rem;
+  height: 10.3rem;
+  border: 0.45rem solid var(--ring-border);
+  border-radius: 50%;
+  background: var(--ring-inner);
+}
+.breathe-mascot {
+  width: 5.95rem;
+  height: 3.4rem;
+  margin-top: 2.1rem;
+  object-fit: contain;
+}
+.breathe-text {
+  margin-top: 0.85rem;
+  font-family: 'Outfit', 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-color);
+}
+.breathe-dots {
+  font-family: 'Outfit', 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: .6;
+  color: var(--text-color);
+}
+
+.btn-exercise {
+  position: absolute;
+  left: 50%;
+  top: 25.4rem;
+  z-index: 5;
+  width: 6.8rem;
+  height: 1.75rem;
+  margin-left: -3.4rem;
+  border-radius: 1rem;
+  font-size: 0.65rem;
+  font-weight: 500;
+  gap: 0.4rem;
+}
+/* end breathing */
+
+/* notes features */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Outfit:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* =====================================================================
+   CARA PAKAI
+   Satu CSS ini dipakai semua halaman. Tiap halaman WAJIB punya class
+   di tag <html> supaya CSS-nya tidak saling menimpa:
+
+     pace.html     ->  <html lang="id" class="page-breathe">
+     thoughts.html ->  <html lang="id" class="page-thoughts">
+
+   Bagian "SHARED" berlaku di semua halaman.
+   Bagian "BREATHE" hanya berlaku kalau <html> punya class page-breathe.
+   Bagian "THOUGHTS" hanya berlaku kalau <html> punya class page-thoughts.
+   Fitur baru? Tambah bagian baru dengan class halaman sendiri.
+   ===================================================================== */
+
+
+/* =====================================================================
+   SHARED  (aman dipakai semua halaman)
+   ===================================================================== */
+:root {
+  /* Main colors */
+  --color-red:    #FF5344;
+  --color-blue:   #48A0F9;
+  --color-pink:   #FE6EA6;
+  --color-green:  #02C927;
+  --color-yellow: #FFB72A;
+  --bg-color:     #fff;
+
+  /* Text */
+  --text-color:   #2B2B34;
+
+  /* Breathe circle */
+  --ring-outer:   #D7E8FC;
+  --ring-border:  #B5D3F7;
+  --ring-inner:   #F1F6FE;
+
+  /* Thoughts (notes) */
+  --card-bg:      #D3E7FF;
+  --line-color:   #4A4A55;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+a   { text-decoration: none; color: inherit; }
+img { display: block; }
+
+/* dasar tombol (detail warna/ukuran ada di bagian tiap halaman) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform .15s ease, background .2s ease;
+}
+.btn:active { transform: scale(.97); }
+
+
+/* =====================================================================
+   BREATHE  (pace.html)  ->  <html class="page-breathe">
+   Ukuran rem di halaman ini = 16px (default browser), jadi TIDAK ada
+   aturan font-size di html.
+   ===================================================================== */
+.page-breathe body {
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.page-breathe .stage {
+  position: relative;
+  width: 100vw;
+  height: 35.125rem;
+  overflow: hidden;
+  background: var(--bg-color);
+}
+
+.page-breathe .btn { gap: 0.5rem; }
+.page-breathe .btn-dark       { background: var(--text-color); color: var(--bg-color); }
+.page-breathe .btn-dark:hover { background: #1b1c22; }
+
+.page-breathe .clouds {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.page-breathe .Cloud-pace {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 23.2rem;
+  object-fit: fill;
+}
+
+.page-breathe .char {
+  position: absolute;
+  z-index: 3;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+}
+.page-breathe .char-yellow { left: 22.3%; top: 12.2rem; width: 6.75rem; height: 6.75rem; }
+.page-breathe .char-Blue   { left: 87%;   top: 12rem;   width: 7.1rem;  height: 4.25rem; }
+.page-breathe .char-Red    { left: 15.2%; top: 24.4rem; width: 6.7rem;  height: 6.8rem;  }
+.page-breathe .char-Green  { left: 77.7%; top: 20.6rem; width: 5rem;    height: 4.85rem; }
+.page-breathe .char-Pink   { left: 87.8%; top: 28.3rem; width: 5.05rem; height: 3.2rem;  }
+
+.page-breathe .breathe {
+  position: absolute;
+  left: 50%;
+  top: 12rem;
+  z-index: 4;
+  width: 11.8rem;
+  height: 11.8rem;
+  margin-left: -5.9rem;
+}
+.page-breathe .breathe-ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--ring-outer);
+}
+.page-breathe .breathe-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10.3rem;
+  height: 10.3rem;
+  border: 0.45rem solid var(--ring-border);
+  border-radius: 50%;
+  background: var(--ring-inner);
+}
+.page-breathe .breathe-mascot {
+  width: 5.95rem;
+  height: 3.4rem;
+  margin-top: 2.1rem;
+  object-fit: contain;
+}
+.page-breathe .breathe-text {
+  margin-top: 0.85rem;
+  font-family: 'Outfit', 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-color);
+}
+.page-breathe .breathe-dots {
+  font-family: 'Outfit', 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: .6;
+  color: var(--text-color);
+}
+
+.page-breathe .btn-exercise {
+  position: absolute;
+  left: 50%;
+  top: 25.4rem;
+  z-index: 5;
+  width: 6.8rem;
+  height: 1.75rem;
+  margin-left: -3.4rem;
+  border-radius: 1rem;
+  font-size: 0.65rem;
+  font-weight: 500;
+  gap: 0.4rem;
+}
+/* end breathe */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Outfit:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* =====================================================================
+   CARA PAKAI
+   Satu CSS ini dipakai semua halaman. Tiap halaman WAJIB punya class
+   di tag <html> supaya CSS-nya tidak saling menimpa:
+
+     pace.html     ->  <html lang="id" class="page-breathe">
+     thoughts.html ->  <html lang="id" class="page-thoughts">
+
+   Bagian "SHARED" berlaku di semua halaman.
+   Bagian "BREATHE" hanya berlaku kalau <html> punya class page-breathe.
+   Bagian "THOUGHTS" hanya berlaku kalau <html> punya class page-thoughts.
+   Fitur baru? Tambah bagian baru dengan class halaman sendiri.
+   ===================================================================== */
+
+
+/* =====================================================================
+   SHARED  (aman dipakai semua halaman)
+   ===================================================================== */
+:root {
+  /* Main colors */
+  --color-red:    #FF5344;
+  --color-blue:   #48A0F9;
+  --color-pink:   #FE6EA6;
+  --color-green:  #02C927;
+  --color-yellow: #FFB72A;
+  --bg-color:     #fff;
+
+  /* Text */
+  --text-color:   #2B2B34;
+
+  /* Breathe circle */
+  --ring-outer:   #D7E8FC;
+  --ring-border:  #B5D3F7;
+  --ring-inner:   #F1F6FE;
+
+  /* Thoughts (notes) */
+  --card-bg:      #D3E7FF;
+  --line-color:   #4A4A55;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+a   { text-decoration: none; color: inherit; }
+img { display: block; }
+
+/* dasar tombol (detail warna/ukuran ada di bagian tiap halaman) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform .15s ease, background .2s ease;
+}
+.btn:active { transform: scale(.97); }
+
+
+/* =====================================================================
+   BREATHE  (pace.html)  ->  <html class="page-breathe">
+   Ukuran rem di halaman ini = 16px (default browser), jadi TIDAK ada
+   aturan font-size di html.
+   ===================================================================== */
+.page-breathe body {
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.page-breathe .stage {
+  position: relative;
+  width: 100vw;
+  height: 35.125rem;
+  overflow: hidden;
+  background: var(--bg-color);
+}
+
+.page-breathe .btn { gap: 0.5rem; }
+.page-breathe .btn-dark       { background: var(--text-color); color: var(--bg-color); }
+.page-breathe .btn-dark:hover { background: #1b1c22; }
+
+.page-breathe .clouds {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.page-breathe .Cloud-pace {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 23.2rem;
+  object-fit: fill;
+}
+
+.page-breathe .char {
+  position: absolute;
+  z-index: 3;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+}
+.page-breathe .char-yellow { left: 22.3%; top: 12.2rem; width: 6.75rem; height: 6.75rem; }
+.page-breathe .char-Blue   { left: 87%;   top: 12rem;   width: 7.1rem;  height: 4.25rem; }
+.page-breathe .char-Red    { left: 15.2%; top: 24.4rem; width: 6.7rem;  height: 6.8rem;  }
+.page-breathe .char-Green  { left: 77.7%; top: 20.6rem; width: 5rem;    height: 4.85rem; }
+.page-breathe .char-Pink   { left: 87.8%; top: 28.3rem; width: 5.05rem; height: 3.2rem;  }
+
+.page-breathe .breathe {
+  position: absolute;
+  left: 50%;
+  top: 12rem;
+  z-index: 4;
+  width: 11.8rem;
+  height: 11.8rem;
+  margin-left: -5.9rem;
+}
+.page-breathe .breathe-ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--ring-outer);
+}
+.page-breathe .breathe-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10.3rem;
+  height: 10.3rem;
+  border: 0.45rem solid var(--ring-border);
+  border-radius: 50%;
+  background: var(--ring-inner);
+}
+.page-breathe .breathe-mascot {
+  width: 5.95rem;
+  height: 3.4rem;
+  margin-top: 2.1rem;
+  object-fit: contain;
+}
+.page-breathe .breathe-text {
+  margin-top: 0.85rem;
+  font-family: 'Outfit', 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-color);
+}
+.page-breathe .breathe-dots {
+  font-family: 'Outfit', 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: .6;
+  color: var(--text-color);
+}
+
+.page-breathe .btn-exercise {
+  position: absolute;
+  left: 50%;
+  top: 25.4rem;
+  z-index: 5;
+  width: 6.8rem;
+  height: 1.75rem;
+  margin-left: -3.4rem;
+  border-radius: 1rem;
+  font-size: 0.65rem;
+  font-weight: 500;
+  gap: 0.4rem;
+}
+/* end breathe */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Outfit:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* =====================================================================
+   CARA PAKAI
+   Satu CSS ini dipakai semua halaman. Tiap halaman WAJIB punya class
+   di tag <html> supaya CSS-nya tidak saling menimpa:
+
+     pace.html     ->  <html lang="id" class="page-breathe">
+     thoughts.html ->  <html lang="id" class="page-thoughts">
+
+   Bagian "SHARED" berlaku di semua halaman.
+   Bagian "BREATHE" hanya berlaku kalau <html> punya class page-breathe.
+   Bagian "THOUGHTS" hanya berlaku kalau <html> punya class page-thoughts.
+   Fitur baru? Tambah bagian baru dengan class halaman sendiri.
+   ===================================================================== */
+
+
+/* =====================================================================
+   SHARED  (aman dipakai semua halaman)
+   ===================================================================== */
+:root {
+  /* Main colors */
+  --color-red:    #FF5344;
+  --color-blue:   #48A0F9;
+  --color-pink:   #FE6EA6;
+  --color-green:  #02C927;
+  --color-yellow: #FFB72A;
+  --bg-color:     #fff;
+
+  /* Text */
+  --text-color:   #2B2B34;
+
+  /* Breathe circle */
+  --ring-outer:   #D7E8FC;
+  --ring-border:  #B5D3F7;
+  --ring-inner:   #F1F6FE;
+
+  /* Thoughts (notes) */
+  --card-bg:      #D3E7FF;
+  --line-color:   #4A4A55;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+a   { text-decoration: none; color: inherit; }
+img { display: block; }
+
+/* dasar tombol (detail warna/ukuran ada di bagian tiap halaman) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform .15s ease, background .2s ease;
+}
+.btn:active { transform: scale(.97); }
+
+
+/* =====================================================================
+   BREATHE  (pace.html)  ->  <html class="page-breathe">
+   Ukuran rem di halaman ini = 16px (default browser), jadi TIDAK ada
+   aturan font-size di html.
+   ===================================================================== */
+.page-breathe body {
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.page-breathe .stage {
+  position: relative;
+  width: 100vw;
+  height: 35.125rem;
+  overflow: hidden;
+  background: var(--bg-color);
+}
+
+.page-breathe .btn { gap: 0.5rem; }
+.page-breathe .btn-dark       { background: var(--text-color); color: var(--bg-color); }
+.page-breathe .btn-dark:hover { background: #1b1c22; }
+
+.page-breathe .clouds {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.page-breathe .Cloud-pace {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 23.2rem;
+  object-fit: fill;
+}
+
+.page-breathe .char {
+  position: absolute;
+  z-index: 3;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+}
+.page-breathe .char-yellow { left: 22.3%; top: 12.2rem; width: 6.75rem; height: 6.75rem; }
+.page-breathe .char-Blue   { left: 87%;   top: 12rem;   width: 7.1rem;  height: 4.25rem; }
+.page-breathe .char-Red    { left: 15.2%; top: 24.4rem; width: 6.7rem;  height: 6.8rem;  }
+.page-breathe .char-Green  { left: 77.7%; top: 20.6rem; width: 5rem;    height: 4.85rem; }
+.page-breathe .char-Pink   { left: 87.8%; top: 28.3rem; width: 5.05rem; height: 3.2rem;  }
+
+.page-breathe .breathe {
+  position: absolute;
+  left: 50%;
+  top: 12rem;
+  z-index: 4;
+  width: 11.8rem;
+  height: 11.8rem;
+  margin-left: -5.9rem;
+}
+.page-breathe .breathe-ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--ring-outer);
+}
+.page-breathe .breathe-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10.3rem;
+  height: 10.3rem;
+  border: 0.45rem solid var(--ring-border);
+  border-radius: 50%;
+  background: var(--ring-inner);
+}
+.page-breathe .breathe-mascot {
+  width: 5.95rem;
+  height: 3.4rem;
+  margin-top: 2.1rem;
+  object-fit: contain;
+}
+.page-breathe .breathe-text {
+  margin-top: 0.85rem;
+  font-family: 'Outfit', 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-color);
+}
+.page-breathe .breathe-dots {
+  font-family: 'Outfit', 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: .6;
+  color: var(--text-color);
+}
+
+.page-breathe .btn-exercise {
+  position: absolute;
+  left: 50%;
+  top: 25.4rem;
+  z-index: 5;
+  width: 6.8rem;
+  height: 1.75rem;
+  margin-left: -3.4rem;
+  border-radius: 1rem;
+  font-size: 0.65rem;
+  font-weight: 500;
+  gap: 0.4rem;
+}
+/* end breathe */
