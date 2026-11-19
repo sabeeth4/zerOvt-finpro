@@ -4,7 +4,8 @@ const breathText = document.querySelector("#breathe-text");
 const startBtn = document.querySelector("#start-btn");
 
 const wait = (seconds) =>
-    new Promise ((resolve) => setTimeout(resolve, seconds * 1000));
+  new Promise ((resolve) => setTimeout(resolve, seconds * 1000)
+);
 
 async function startExercise() {
   startBtn.disabled = true;
@@ -14,7 +15,7 @@ async function startExercise() {
     // 1. Tarik napas: lingkaran membesar
     breathText.textContent = "Breathe In";
     outerCircle.style.transition = "transform 4s ease-in-out";
-    outerCircle.style.transform = "scale(1.3)";
+    outerCircle.style.transform = "scale(1.25)";
     await wait(4);
 
     // 2. Tahan: ukuran tetap
@@ -35,6 +36,8 @@ async function startExercise() {
   breathText.textContent = "Done 🎉";
   startBtn.disabled = false;
   startBtn.textContent = "try again";
+
+  
 }
 
 startBtn.addEventListener("click", startExercise)

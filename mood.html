@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Checker</title>
+    <link rel="stylesheet" href="css/mood.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+</head>
+<body>
+    <main class="mood-section">
+        <h1 class="mood-title">how was your day?</h1>
+
+        <div class="mood-list">
+
+            <!-- bg bawah -->
+            <div class="clouds" aria-hidden="true">
+                <img class="Cloud-pace" src="assets/Cloud-pace.png" alt="Cloud Background">
+            </div>
+
+            <!-- card mood -->
+            <button class="mood-card" data-mood="overthinking">
+                <img src="assets/Overthinking.png" alt="Overthinking">
+                <span>overthinking</span>
+            </button>
+
+            <button class="mood-card" data-mood="heavy">
+                <img src="assets/Heavy.png" alt="Heavy">
+                <span>heavy</span>
+            </button>
+
+            <button class="mood-card" data-mood="overwhelm">
+                <img src="assets/Overwhelm.png" alt="Overwhelm">
+                <span>overwhelm</span>
+            </button>
+
+            <button class="mood-card" data-mood="anxious">
+                <img src="assets/Anxious.png" alt="Anxious">
+                <span>anxious</span>
+            </button>
+
+            <button class="mood-card" data-mood="calm">
+                <img src="assets/Calm.png" alt="Calm">
+                <span>calm</span>
+            </button>
+
+        </div>
+  </main>
+  <script src="js/mood-data.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
