@@ -15,16 +15,17 @@
 
     <h1 class="audio-title">Which audio is soothing ?</h1>
 
-    <!-- 4 kartu audio: gambar = <img>, teks ada di atas gambar -->
+    <!-- 4 kartu audio: gambar = <img>, teks sudah ada di dalam gambar -->
     <section class="audio-list">
 
       <article class="audio-card">
         <div class="audio-thumb">
           <img src="assets/ocean-audio.png" alt="Ocean">
         </div>
+        <audio class="audio-player" src="assets/ocean-audio.mp3" preload="none" loop></audio>
         <button class="btn btn-audio" type="button">
           <img class="icon-play" src="assets/Play.png" alt="">
-          Start audio
+          <span class="btn-label">Start audio</span>
         </button>
       </article>
 
@@ -32,9 +33,10 @@
         <div class="audio-thumb">
           <img src="assets/night-audio.png" alt="Night Sky">
         </div>
+        <audio class="audio-player" src="assets/night-audio.mp3" preload="none" loop></audio>
         <button class="btn btn-audio" type="button">
-          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 0.8 L9 5 L2 9.2 Z"/></svg>
-          Start audio
+          <img class="icon-play" src="assets/Play.png" alt="">
+          <span class="btn-label">Start audio</span>
         </button>
       </article>
 
@@ -42,9 +44,10 @@
         <div class="audio-thumb">
           <img src="assets/rain-audio.png" alt="Rain">
         </div>
+        <audio class="audio-player" src="assets/rain-audio.mp3" preload="none" loop></audio>
         <button class="btn btn-audio" type="button">
-          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 0.8 L9 5 L2 9.2 Z"/></svg>
-          Start audio
+          <img class="icon-play" src="assets/Play.png" alt="">
+          <span class="btn-label">Start audio</span>
         </button>
       </article>
 
@@ -52,9 +55,10 @@
         <div class="audio-thumb">
           <img src="assets/forest-audio.png" alt="Forest">
         </div>
+        <audio class="audio-player" src="assets/forest-audio.mp3" preload="none" loop></audio>
         <button class="btn btn-audio" type="button">
-          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 0.8 L9 5 L2 9.2 Z"/></svg>
-          Start audio
+          <img class="icon-play" src="assets/Play.png" alt="">
+          <span class="btn-label">Start audio</span>
         </button>
       </article>
 
@@ -71,10 +75,11 @@
 
     <!-- Awan (gambar) -->
     <div class="clouds" aria-hidden="true">
-      <img class="cloud-img" src="assets/cloud-thought.png" alt="">
+      <img class="cloud-img" src="assets/Cloud-Pace.png" alt="">
     </div>
 
   </main>
 
+  <script src="js/noise.js"></script>
 </body>
 </html>
