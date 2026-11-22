@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 100%; height: 100%; overflow: hidden; }
+a   { text-decoration: none; color: inherit; }
+img { display: block; }
 .btn {
   display: inline-flex;
   align-items: center;
@@ -9,13 +15,14 @@
 }
 .btn:active { transform: scale(.97); }
 
+/* ---------- halaman audio ---------- */
 html {
   font-size: min(calc(100vw / 48.875), calc(100vh / 31.75), 30px);
 }
 
 body {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-end;       /* awan selalu nempel di dasar layar */
   justify-content: center;
   font-family: 'Fredoka', 'Poppins', sans-serif;
   background: #fff;
@@ -85,7 +92,9 @@ body {
   font-weight: 500;
 }
 .btn-audio:hover { background: #6CB169; }
+.btn-audio.is-playing { background: #5FA85C; }   /* tombol lagi memutar audio */
 .btn-audio .icon-play {
+  flex: none;
   width: 0.55rem;
   height: 0.55rem;
   object-fit: contain;
@@ -101,6 +110,19 @@ body {
   font-size: 0.92rem;
   font-weight: 400;
   color: #4C8DE3;
+  z-index: 4;
+}
+
+/* kredit audio Freesound (kecil, di bawah kalimat) */
+.audio-credit {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30.4rem;
+  text-align: center;
+  font-size: 0.4rem;
+  font-weight: 300;
+  color: #7FA8D8;
   z-index: 4;
 }
 
@@ -132,4 +154,5 @@ body {
   display: block;
   width: 100%;
   height: 100%;
+  object-fit: fill;
 }
