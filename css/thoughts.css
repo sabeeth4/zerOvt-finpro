@@ -1,9 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
-
 :root {
-  /* Thoughts (notes) */
-  --card-bg:      #D3E7FF;
-  --line-color:   #4A4A55;
+  --card-bg: #D3E7FF;
+  --line-color: #4A4A55;
 }
 
 .page-thoughts {
@@ -15,8 +12,8 @@ body {
   align-items: flex-end;
   justify-content: center;
   font-family: 'Poppins', sans-serif;
-  background: #fff;
-  color: var(--text-color);
+  background: var(--bg-color);
+  color: var(--bg-color);
   overflow: hidden;
 }
 
@@ -29,26 +26,27 @@ body {
 
 .btn {
   font-weight: 600;
-  color: #fff;
+  color: var(--bg-color);
   background: var(--text-color);
 }
-.btn:hover { 
-  color: #2b2b2b; 
-  background: #fff;
-}
 
+.btn:hover {
+  color: var(--text-color);
+  background: var(--bg-color);
+}
 
 .title {
   position: absolute;
   left: 2.9375rem;
   top: 8.3125rem;
-  font-family: 'Outfit', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 2.0625rem;
   font-weight: 400;
   line-height: 2.625rem;
   color: var(--text-color);
   z-index: 4;
 }
+
 .desc {
   position: absolute;
   left: 2.9375rem;
@@ -70,13 +68,13 @@ body {
   z-index: 4;
 }
 
-/* textarea dengan garis baris (tulisan duduk di atas garis) */
+/* tulisan diatas garis */
 .note-input {
   position: absolute;
-  left: 1.3125rem;
-  top: 0.1875rem;
-  width: 20.8125rem;
-  height: 11.625rem;
+  left: 1.3rem;
+  top: 0.2rem;
+  width: 21rem;
+  height: 11rem;
   padding: 0;
   border: 0;
   outline: 0;
@@ -89,10 +87,13 @@ body {
   background-attachment: local;
   font-family: 'Poppins', sans-serif;
   font-size: 0.75rem;
-  line-height: 1.9375rem;
+  line-height: 2rem;
   color: var(--text-color);
 }
-.note-input::-webkit-scrollbar { display: none; }
+
+.note-input::-webkit-scrollbar {
+  display: none;
+}
 
 .note-count {
   position: absolute;
@@ -100,32 +101,66 @@ body {
   top: 12.6875rem;
   font-size: 0.75rem;
   line-height: 1.125rem;
+  color: var(--text-color);
 }
 
 .btn-finish {
-  position: absolute;
-  background: #2b2b2b;
-  left: 38.25rem;
-  top: 25.5625rem;
-  width: 6.5625rem;
-  height: 2.125rem;
-  border-radius: 1.0625rem;
-  font-size: 0.6875rem;
-  z-index: 6;
+  padding: 16px 34px;
+  border-radius: 40px;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: var(--text-color);
+  color: var(--bg-color);
 }
 
-/* karakter (posisi = titik tengah, rotate = kemiringan seperti desain) */
 .char-thoughts {
   position: absolute;
   z-index: 5;
   object-fit: contain;
   transform: translate(-50%, -50%) rotate(var(--tilt, 0deg));
 }
-.char-Blue-thoughts   { --tilt: -17deg; left: 5.3125rem;  top: 18rem;      width: 5.875rem; height: 3.375rem; }
-.char-Red-thoughts    { --tilt: 0deg;   left: 14.9375rem; top: 17.8438rem; width: 5.875rem; height: 5.9375rem; }
-.char-Green-thoughts  { --tilt: 0deg;   left: 10.4688rem; top: 21.4062rem; width: 4.0625rem; height: 4.0625rem; }
-.char-yellow-thoughts { --tilt: 0deg;   left: 5.5rem;     top: 25.0625rem; width: 6.125rem; height: 6.125rem; }
-.char-Pink-thoughts   { --tilt: 8deg;   left: 15.875rem;  top: 25.2812rem; width: 5.25rem;  height: 3.3125rem; }
+
+.char-Blue-thoughts {
+  --tilt: -17deg;
+  left: 5.3125rem;
+  top: 18rem;
+  width: 5.875rem;
+  height: 3.375rem;
+}
+
+.char-Red-thoughts {
+  --tilt: 0deg;
+  left: 14.9375rem;
+  top: 17.8438rem;
+  width: 5.875rem;
+  height: 5.9375rem;
+}
+
+.char-Green-thoughts {
+  --tilt: 0deg;
+  left: 10.4688rem;
+  top: 21.4062rem;
+  width: 4.0625rem;
+  height: 4.0625rem;
+}
+
+.char-yellow-thoughts {
+  --tilt: 0deg;
+  left: 5.5rem;
+  top: 25.0625rem;
+  width: 6.125rem;
+  height: 6.125rem;
+}
+
+.char-Pink-thoughts {
+  --tilt: 8deg;
+  left: 15.875rem;
+  top: 25.2812rem;
+  width: 5.25rem;
+  height: 3.3125rem;
+}
 
 .clouds {
   position: absolute;
@@ -137,6 +172,7 @@ body {
   z-index: 1;
   pointer-events: none;
 }
+
 .cloud-img {
   display: block;
   width: 100%;

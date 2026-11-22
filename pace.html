@@ -1,44 +1,51 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zero Pace</title>
-  <link rel="stylesheet" href="css/features.css">
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
-  </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Pace</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/features.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+</head>
+
 <body>
+    <nav class="navbar" id="navbar"></nav>
     <main class="stage">
-        <!-- bg bawah -->
-        <div class="clouds" aria-hidden="true">
-        <img class="Cloud-pace" src="assets/Cloud-pace.png" alt="Cloud Background">
-        </div>
-
-        <!-- char -->
-        <img class="char char-yellow" src="assets/Calm.png"        alt="Calm">
-        <img class="char char-Green"  src="assets/Anxious.png"     alt="Anxious">
-        <img class="char char-Pink"   src="assets/Overwhelm.png"   alt="Overwhelm">
-        <img class="char char-Blue"   src="assets/Heavy.png"       alt="Heavy">
-        <img class="char char-Red"    src="assets/Overthinking.png" alt="Overthinking">
-
-        <section class="breathe" id="home">
-        <div class="breathe-ring" id="outer-circle">
-            <div class="breathe-inner">
-            <img class="breathe-mascot" src="assets/breathe.png" alt="">
-            <h2 class="breathe-text" id="breathe-text">Breathe In</h2>
-            <span class="breathe-dots">...</span>
+        <section>
+            <!-- bg bawah -->
+            <div class="clouds" aria-hidden="true">
+                <img class="Cloud-pace" src="assets/Cloud-pace.png" alt="Cloud Background">
             </div>
-        </div>
+
+            <!-- char -->
+            <img class="char char-yellow" src="assets/Calm.png" alt="Calm">
+            <img class="char char-Green" src="assets/Anxious.png" alt="Anxious">
+            <img class="char char-Pink" src="assets/Overwhelm.png" alt="Overwhelm">
+            <img class="char char-Blue" src="assets/Heavy.png" alt="Heavy">
+            <img class="char char-Red" src="assets/Overthinking.png" alt="Overthinking">
+
+            <section class="breathe" id="home">
+                <div class="breathe-ring" id="outer-circle">
+                    <div class="breathe-inner">
+                        <img class="breathe-mascot" src="assets/breathe.png" alt="">
+                        <h2 class="breathe-text" id="breathe-text">Breathe In</h2>
+                        <span class="breathe-dots">...</span>
+                    </div>
+                </div>
+            </section>
+            <button class="btn btn-dark btn-exercise" id="startBtn" type="button">
+                <i class="ri-play-fill"></i>
+                Start Exercise
+            </button>
         </section>
-        <button class="btn btn-dark btn-exercise" id="start-btn" type="button">
-            <i class="ri-play-fill"></i>
-            Start Exercise
-        </button>
-        
+
         <script src="js/main.js"></script>
+        <script src="js/navbar.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </main>
 
 </body>
+
 </html>
