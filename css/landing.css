@@ -447,16 +447,15 @@ img {
 
 .accordian {
     width: 100%;
-    border-radius: 10px;
-    overflow: hidden;
     transition: transform 0.2s ease;
 }
 
 .question {
     list-style: none;
     width: 100%;
-    min-height: 78px;
-    padding: 0 42px;
+    min-height: 72px;
+    padding: 0 40px;
+    border-radius: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -478,11 +477,20 @@ img {
 
 .answer {
     font-size: 15px;
-    display: flex;
-    text-align: center;
+    display: block;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s;
+}
+
+.answer p {
+    margin-top: 12px;
+    padding: 24px 40px;
+    border-radius: 32px;
+    background: color-mix(in srgb, var(--color-blue) 12%, white);
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.6;
 }
 
 .faq-yellow {

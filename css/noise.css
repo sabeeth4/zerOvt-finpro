@@ -22,25 +22,28 @@ html {
 
 body {
   display: flex;
-  align-items: flex-end;       /* awan selalu nempel di dasar layar */
-  justify-content: center;
+  flex-direction: column;   /* navbar di atas, stage di bawahnya */
+  align-items: center;
+  height: 100vh;
   font-family: 'Fredoka', 'Poppins', sans-serif;
-  background: #fff;
-  color: var(--text-color, #2B2B34);
+  background: var(--bg-color);
+  color: var(--text-color);
 }
+
 
 .stage {
   position: relative;
   flex: none;
-  width: 48.875rem;
+  width: 48.8rem;
   height: 31.75rem;
+  margin-top: 0;
 }
 
 /* judul */
 .audio-title {
   position: absolute;
-  left: 2.4375rem;
-  top: 8.6rem;
+  left: 2.4rem;
+  top: 3rem;
   font-size: 1.3rem;
   font-weight: 500;
   line-height: 1.7rem;
@@ -52,8 +55,8 @@ body {
 /* deretan 4 kartu */
 .audio-list {
   position: absolute;
-  left: 2.4375rem;
-  top: 12.3125rem;
+  left: 2.4rem;
+  top: 6rem;
   display: flex;
   gap: 1.5rem;
   z-index: 4;
@@ -62,7 +65,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 9.875rem;
+  width: 9.8rem;
 }
 
 /* gambar + teks di atasnya */
@@ -105,7 +108,7 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  top: 27.7rem;
+  top: 22rem;
   text-align: center;
   font-size: 0.92rem;
   font-weight: 400;
@@ -118,7 +121,7 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  top: 30.4rem;
+  top: 24rem;
   text-align: center;
   font-size: 0.4rem;
   font-weight: 300;
@@ -133,11 +136,11 @@ body {
   object-fit: contain;
   transform: translate(-50%, -50%) rotate(var(--tilt, 0deg));
 }
-.char-Red-audio    { --tilt: 0deg;   left: 3.95rem;  top: 28.56rem; width: 3.63rem; height: 3.63rem; }
-.char-Green-audio  { --tilt: 0deg;   left: 11.7rem;  top: 28rem;    width: 2.56rem; height: 2.56rem; }
-.char-Pink-audio   { --tilt: -10deg; left: 25.1rem;  top: 26.4rem;  width: 3.3rem;  height: 2rem; }
-.char-yellow-audio { --tilt: 18deg;  left: 38.9rem;  top: 28.8rem;  width: 3.6rem;  height: 3.6rem; }
-.char-Blue-audio   { --tilt: -12deg; left: 46.2rem;  top: 26.9rem;  width: 4.43rem; height: 2.7rem; }
+.char-Red-audio    { --tilt: 0deg;   left: 3.95rem;  top: 22rem; width: 3.63rem; height: 3.63rem; }
+.char-Green-audio  { --tilt: 0deg;   left: 11.7rem;  top: 22rem;    width: 2.56rem; height: 2.56rem; }
+.char-Pink-audio   { --tilt: -10deg; left: 25.1rem;  top: 20rem;  width: 3.3rem;  height: 2rem; }
+.char-yellow-audio { --tilt: 18deg;  left: 38.9rem;  top: 23rem;  width: 3.6rem;  height: 3.6rem; }
+.char-Blue-audio   { --tilt: -12deg; left: 46.2rem;  top: 21rem;  width: 4.43rem; height: 2.7rem; }
 
 /* awan (gambar), selebar layar, nempel di bawah */
 .clouds {
@@ -145,7 +148,7 @@ body {
   left: 50%;
   bottom: 0;
   width: 100vw;
-  height: 12.6875rem;
+  height: 23rem;
   transform: translateX(-50%);
   z-index: 1;
   pointer-events: none;

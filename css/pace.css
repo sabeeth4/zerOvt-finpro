@@ -71,11 +71,11 @@ img { display: block; }
   object-fit: contain;
   transform: translate(-50%, -50%);
 }
-.char-yellow { left: 20%; top: 9.2rem;  width: 9rem;  height: 9rem; }
-.char-Blue   { left: 80%; top: 9rem;  width: 12rem;  height: 10rem; }
-.char-Red    { left: 9%;  top: 24rem; width: 12rem;  height: 12rem; }
-.char-Green  { left: 25%; top: 31rem; width: 7rem; height: 7.25rem; }
-.char-Pink   { left: 86%; top: 22rem; width: 11rem;  height: 8rem; }
+.char-yellow { left: 20%; top: 9.2rem;  width: 8rem;  height: 8rem; }
+.char-Blue   { left: 83%; top: 9rem;  width: 10rem;  height: 8rem; }
+.char-Red    { left: 9%;  top: 20rem; width: 10rem;  height: 10rem; }
+.char-Green  { left: 25%; top: 28rem; width: 7rem; height: 7.25rem; }
+.char-Pink   { left: 78%; top: 22rem; width: 9rem;  height: 6rem; }
 .breathe {
   position: absolute;
   left: 50%;

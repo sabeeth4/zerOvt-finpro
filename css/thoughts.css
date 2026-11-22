@@ -3,19 +3,17 @@
   --line-color: #4A4A55;
 }
 
-.page-thoughts {
-  font-size: min(calc(100vw / 48.875), calc(100vh / 31.75), 30px);
-}
-
 body {
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  flex-direction: column;   /* navbar di atas, stage di bawahnya */
+  align-items: center;
+  height: 100vh;
   font-family: 'Poppins', sans-serif;
   background: var(--bg-color);
-  color: var(--bg-color);
+  color: var(--text-color);   /* tadinya var(--bg-color), lihat poin 3 */
   overflow: hidden;
 }
+
 
 .stage {
   position: relative;
@@ -24,45 +22,34 @@ body {
   height: 31.75rem;
 }
 
-.btn {
-  font-weight: 600;
-  color: var(--bg-color);
-  background: var(--text-color);
-}
-
-.btn:hover {
-  color: var(--text-color);
-  background: var(--bg-color);
-}
-
 .title {
   position: absolute;
-  left: 2.9375rem;
-  top: 8.3125rem;
+  left: 3rem;
+  top: 4.3rem;
   font-family: 'Poppins', sans-serif;
-  font-size: 2.0625rem;
+  font-size: 2rem;
   font-weight: 400;
-  line-height: 2.625rem;
+  line-height: 2.6rem;
   color: var(--text-color);
   z-index: 4;
 }
 
 .desc {
   position: absolute;
-  left: 2.9375rem;
-  top: 11.75rem;
-  width: 17.1875rem;
+  left: 3rem;
+  top: 7.75rem;
+  width: 17rem;
   font-size: 0.75rem;
-  line-height: 1.1875rem;
+  line-height: 1.1rem;
   z-index: 4;
 }
 
 .note {
   position: absolute;
-  left: 21.1875rem;
-  top: 8.3125rem;
-  width: 23.4375rem;
-  height: 15.125rem;
+  left: 21rem;
+  top: 6rem;
+  width: 23.4rem;
+  height: 15rem;
   border-radius: 1.75rem;
   background: var(--card-bg);
   z-index: 4;
@@ -83,7 +70,7 @@ body {
   scrollbar-width: none;
   background-color: transparent;
   background-image: linear-gradient(to bottom, transparent 1.875rem, var(--line-color) 1.875rem);
-  background-size: 100% 1.9375rem;
+  background-size: 100% 1.9rem;
   background-attachment: local;
   font-family: 'Poppins', sans-serif;
   font-size: 0.75rem;
@@ -105,14 +92,20 @@ body {
 }
 
 .btn-finish {
-  padding: 16px 34px;
-  border-radius: 40px;
-  font-family: "Poppins", sans-serif;
-  font-size: 17px;
-  font-weight: 500;
-  text-decoration: none;
+  position: absolute;
+  right: 4.25rem;      /* sejajar sisi kanan kartu */
+  top: 25rem;          /* di bawah kartu note */
+  z-index: 5;
+  padding: 12px 26px;
+  border-radius: 30px;
   background-color: var(--text-color);
   color: var(--bg-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
 }
 
 .char-thoughts {
