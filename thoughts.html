@@ -69,7 +69,7 @@
     input.addEventListener('input', updateCount);
     updateCount();
 
-    // ----- pesawat kertas + popup kertas kosong -----
+    // pesawat sama kertas kosong
     const finishBtn  = document.querySelector('.btn-finish');
     const plane      = document.getElementById('plane');
     const popup      = document.getElementById('emptyPopup');
@@ -79,9 +79,8 @@
     function closePopup() { popup.classList.remove('show'); input.focus(); }
 
     finishBtn.addEventListener('click', function () {
-      if (plane.classList.contains('fly')) return;     // jangan jalan dua kali
+      if (plane.classList.contains('fly')) return; 
 
-      // kertas masih kosong (atau cuma spasi): tampilkan popup, pesawat jangan terbang
       if (input.value.trim() === '') {
         openPopup();
         return;
@@ -100,7 +99,6 @@
       finishBtn.disabled = false;
     });
 
-    // tutup popup: tombol Okay, klik di luar kotak, atau tekan Esc
     popupClose.addEventListener('click', closePopup);
     popup.addEventListener('click', function (e) { if (e.target === popup) closePopup(); });
     document.addEventListener('keydown', function (e) {
