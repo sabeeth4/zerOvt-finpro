@@ -39,7 +39,26 @@ navbarEl.innerHTML = `
       <img src="assets/logo.png" alt="">
       zerOvt
     </a>
-    <ul class="nav-links">${links}</ul>
-    ${buttons[variant] || ""}
+    <ul class="nav-links">
+      ${links}
+      <li class="nav-mobile-cta"><a href="mood.html" class="nav-link">Get started</a></li>
+    </ul>
+    <div class="nav-actions">
+      ${buttons[variant] || ""}
+      <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </nav>
 `;
+const navToggle = navbarEl.querySelector(".nav-toggle");
+const navLinks = navbarEl.querySelector(".nav-links");
+
+if (navToggle && navLinks) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+}
