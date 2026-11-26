@@ -16,46 +16,46 @@
 <body>
     <nav id="navbar" data-variant="landing"></nav>
     <main>
-        <!-- Section 1: hero -->
+        <!-- hero -->
         <section id="home" class="hero-section">
 
             <div class="hero-content">
-                <h1 class="hero-title">
+                <h1 class="hero-title" id="hero-title">
                     <span class="line">
-                        <span style="color: var(--color-yellow);">how</span> <span
-                            style="color: var(--color-green);">are</span>
+                        <span style="color: var(--color-yellow);">how</span>
+                        <span style="color: var(--color-green);">are</span>
                     </span>
                     <span class="line">
-                        <span style="color: var(--color-blue);">you</span> <span
-                            style="color: var(--color-pink);">today?</span>
+                        <span style="color: var(--color-blue);">you</span>
+                        <span style="color: var(--color-pink);">today?</span>
                     </span>
                 </h1>
 
                 <div class="hero-buttons">
-                    <a href="#about" class="btn-primary">Clear my mind <span class="btn-arrow">→</span></a>
+                    <a href="mood.html" class="btn-primary">Clear my mind <span class="btn-arrow">→</span></a>
                     <a href="#about" class="btn-secondary">How it works ↓</a>
                 </div>
             </div>
 
             <div class="hero-visual">
-                <img src="assets/awanbiru.png" alt="" class="hv-cloud-back">
-                <img src="assets/z(1).png" alt="" class="hv-z hv-z1">
-                <img src="assets/z(2).png" alt="" class="hv-z hv-z2">
-                <img src="assets/Calm.png" alt="" class="hv-char hv-yellow">
-                <img src="assets/Heavy.png" alt="" class="hv-char hv-blue">
-                <img src="assets/Overthinking.png" alt="" class="hv-char hv-red">
-                <img src="assets/Anxious.png" alt="" class="hv-char hv-green">
-                <img src="assets/Overwhelm.png" alt="" class="hv-char hv-pink">
-                <img src="assets/awanputih.png" alt="" class="hv-cloud-front">
+                <img class="hv-cloud-back" src="assets/awanbiru.png" alt="">
+                <img class="hv-z hv-z1" src="assets/z(1).png" alt="">
+                <img class="hv-z hv-z2" src="assets/z(2).png" alt="">
+                <img class="hv-char hv-yellow" id="yellow" src="assets/Calm.png" alt="">
+                <img class="hv-char hv-blue" id="blue" src="assets/Heavy.png" alt="">
+                <img class="hv-char hv-red" id="red" src="assets/Overthinking.png" alt="">
+                <img class="hv-char hv-green" id="green" src="assets/Anxious.png" alt="">
+                <img class="hv-char hv-pink" id="pink" src="assets/Overwhelm.png" alt="">
+                <img class="hv-cloud-front" src="assets/awanputih.png" alt="">
             </div>
 
         </section>
 
-        <!-- Section 2: about -->
+        <!-- about -->
         <section id="about" class="about-section">
             <div class="about-container">
 
-                <!-- bagian kiri -->
+                <!-- kiri -->
                 <div class="about-content">
 
                     <h2 class="about-title">
@@ -71,7 +71,6 @@
                         sounds.
                     </p>
 
-                    <!-- karakter -->
                     <div class="about-chars">
                         <img src="assets/Overwhelm.png" alt="" class="mini-char mc-pink">
                         <img src="assets/Heavy.png" alt="" class="mini-char mc-blue">
@@ -82,17 +81,17 @@
 
                 </div>
 
-                <!-- bagian kanan -->
+                <!-- kanan -->
                 <div class="about-right">
 
                     <div id="features" class="envelope-visual">
 
                         <img src="assets/amplop.png" alt="" class="envelope-img">
 
-                        <a href="mood.html" class="feature-pill pill-1">1. Mood Checker</a>
-                        <a href="thoughts.html" class="feature-pill pill-2">2. Zero Thoughts</a>
-                        <a href="pace.html" class="feature-pill pill-3">3. Zero Pace</a>
-                        <a href="noise.html" class="feature-pill pill-4">4. Zero Noise</a>
+                        <a class="feature-pill pill-1" id="moood-pill" href="mood.html">1. Mood Checker</a>
+                        <a class="feature-pill pill-2" id="thoughts-pill" href="thoughts.html">2. Zero Thoughts</a>
+                        <a class="feature-pill pill-3" id="pace-pill" href="pace.html">3. Zero Pace</a>
+                        <a class="feature-pill pill-4" id="" href="noise.html">4. Zero Noise</a>
 
                     </div>
 
@@ -101,7 +100,7 @@
             </div>
         </section>
 
-        <!-- Section 3: FAQ -->
+        <!-- FAQ -->
         <section id="faq" class="faq-section">
             <div class="faq-container">
                 <div class="faq-left">
@@ -114,7 +113,7 @@
 
                     <div class="accordian">
                         <div class="question faq-yellow">What is zerOvt, exactly?
-                            <i id="icon" class="ri-arrow-down-s-line"></i>
+                            <i id="arrow" class="ri-arrow-down-s-line"></i>
                         </div>
                         <div class="answer">
                             <p>zerOvt (short for Zero Overthinking) is your pocket-sized reset button for
@@ -126,7 +125,7 @@
 
                     <div class="accordian">
                         <div class="question faq-green">Do I need to create an account or pay to use it?
-                            <i id="icon" class="ri-arrow-down-s-line"></i>
+                            <i id="arrow" class="ri-arrow-down-s-line"></i>
                         </div>
                         <div class="answer active">
                             <p>Nope! No sign-ups, no passwords to remember, and no boring rules.
@@ -137,7 +136,7 @@
 
                     <div class="accordian">
                         <div class="question faq-blue">How do the 4 features actually work?
-                            <i id="icon" class="ri-arrow-down-s-line"></i>
+                            <i id="arrow" class="ri-arrow-down-s-line"></i>
                         </div>
                         <div class="answer">
                             <p>Mood Checker: A quick, judgment-free check-in to see how you're really
@@ -155,7 +154,7 @@
 
                     <div class="accordian">
                         <div class="question faq-red">Is my brain-dump / data saved anywhere?
-                            <i id="icon" class="ri-arrow-down-s-line"></i>
+                            <i id="arrow" class="ri-arrow-down-s-line"></i>
                         </div>
 
                         <div class="answer">
@@ -170,10 +169,12 @@
 
             </div>
         </section>
+
         <!-- section 4 -->
         <section id="vibe-banner" class="vibe-banner-section">
             <h2 class="title rainbow-text">no thought, just vibes</h2>
         </section>
+
         <!-- footer -->
         <footer class="site-footer">
             <div class="footer-container">
@@ -223,8 +224,14 @@
             </div>
         </footer>
     </main>
+    <!-- gsap lenis -->
+     <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script> 
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.1/gsap.min.js" integrity="sha512-VMHB/Dy1/3d+djJPdMhxbplbZgbfPNHy+yWCxB1MSrwUEcNE+gnviL/DwlGsh9wwobnRTiQc6ChK2ZoJamshXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.1/ScrollTrigger.min.js" integrity="sha512-D5qw2l97FMLBYpI6cEo6DrCnswh1uRJUPWZnFz31dip5SubdDrsNB/crWM38QEvZbRDobtyvxFRPx9o0ksViMg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <!-- js -->
     <script src="js/navbar.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/landing.js"></script>
 </body>
 
 </html>

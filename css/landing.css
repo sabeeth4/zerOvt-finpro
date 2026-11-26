@@ -30,13 +30,6 @@ body {
     overflow-x: hidden;
 }
 
-/* warna selang seling */
-.rainbow-text span:nth-child(5n + 1) { color: var(--color-yellow); }
-.rainbow-text span:nth-child(5n + 2) { color: var(--color-green); }
-.rainbow-text span:nth-child(5n + 3) { color: var(--color-pink); }
-.rainbow-text span:nth-child(5n + 4) { color: var(--color-blue); }
-.rainbow-text span:nth-child(5n + 5) { color: var(--color-red); }
-
 
 img {
     display: block;
@@ -972,7 +965,7 @@ img {
     .hero-content {
         width: 100%;
         min-height: auto;
-        padding: 0 24px;
+        padding: 40px 24px 0;
         display: block;
     }
 
@@ -1172,7 +1165,6 @@ img {
         transform: rotate(8deg);
     }
 
-    /* Atur amplop & pill satu per satu agar pas di layar HP tanpa terpotong */
     .envelope-visual {
         position: relative;
         width: 100%;
@@ -1223,6 +1215,7 @@ img {
 
     /* start faq */
     .faq-section {
+        margin: 4rem 0 2rem;
         padding: 40px 24px 48px;
     }
 
@@ -1257,7 +1250,7 @@ img {
     .question {
         min-height: 56px;
         padding: 0 24px;
-        border-radius: 100px;
+        border-radius: 3rem;
         font-size: 15px;
     }
 
@@ -1277,6 +1270,7 @@ img {
 
     /* start vibe banner */
     .vibe-banner-section {
+        margin: 8rem 0 6rem;
         padding: 32px 24px 56px;
     }
 

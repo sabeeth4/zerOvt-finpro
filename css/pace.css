@@ -1,33 +1,38 @@
 :root {
   /* Breathe circle */
-  --ring-outer:  #D7E8FC;
+  --ring-outer: #D7E8FC;
   --ring-border: #B5D3F7;
-  --ring-inner:  #F1F6FE;
+  --ring-inner: #F1F6FE;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
-  overflow: hidden;          
+  overflow: hidden;
 }
 
 body {
   display: flex;
-  align-items: center;  
-  flex-direction: column;    
+  align-items: center;
+  flex-direction: column;
   font-family: 'Poppins', sans-serif;
   background: var(--bg-color);
   color: var(--text-color);
 }
 
 
-img { display: block; }
+img {
+  display: block;
+}
 
 .stage {
   position: relative;
@@ -36,12 +41,14 @@ img { display: block; }
   overflow: hidden;
   background: var(--bg-color);
 }
+
 .clouds {
   position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: none;
 }
+
 .Cloud-pace {
   position: absolute;
   left: 0;
@@ -51,19 +58,27 @@ img { display: block; }
   object-fit: fill;
 }
 
-.btn {
+.btn-dark {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  padding: 1.2rem 2rem;
+  font-size: 1.4rem;
+  border-radius: 1rem;
+  white-space: nowrap;
+  width: auto;
   gap: 0.5rem;
   border: 0;
   cursor: pointer;
   font-family: inherit;
   transition: transform .15s ease;
+  background: var(--text-color);
+  color: var(--bg-color);
 }
-.btn-dark       { background: var(--text-color); color: var(--bg-color); }
-.btn-dark:hover { background: var(--text-color); }
-.btn:active     { transform: scale(.97); }
+
+.btn:active {
+  transform: scale(.97);
+}
 
 .char {
   position: absolute;
@@ -71,11 +86,42 @@ img { display: block; }
   object-fit: contain;
   transform: translate(-50%, -50%);
 }
-.char-yellow { left: 20%; top: 9.2rem;  width: 8rem;  height: 8rem; }
-.char-Blue   { left: 83%; top: 9rem;  width: 10rem;  height: 8rem; }
-.char-Red    { left: 9%;  top: 20rem; width: 10rem;  height: 10rem; }
-.char-Green  { left: 25%; top: 28rem; width: 7rem; height: 7.25rem; }
-.char-Pink   { left: 78%; top: 22rem; width: 9rem;  height: 6rem; }
+
+.char-yellow {
+  left: 20%;
+  top: 9.2rem;
+  width: 8rem;
+  height: 8rem;
+}
+
+.char-Blue {
+  left: 83%;
+  top: 9rem;
+  width: 10rem;
+  height: 8rem;
+}
+
+.char-Red {
+  left: 9%;
+  top: 20rem;
+  width: 10rem;
+  height: 10rem;
+}
+
+.char-Green {
+  left: 25%;
+  top: 28rem;
+  width: 7rem;
+  height: 7.25rem;
+}
+
+.char-Pink {
+  left: 78%;
+  top: 22rem;
+  width: 9rem;
+  height: 6rem;
+}
+
 .breathe {
   position: absolute;
   left: 50%;
@@ -85,10 +131,11 @@ img { display: block; }
   height: 19rem;
   margin-left: -9.5rem;
 }
+
 .breathe-ring {
-  width: 19rem;       
+  width: 19rem;
   height: 19rem;
-  aspect-ratio: 1 / 1; 
+  aspect-ratio: 1 / 1;
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -96,10 +143,11 @@ img { display: block; }
   border-radius: 50%;
   background: var(--ring-outer);
 }
+
 .breathe-inner {
   width: 15rem;
   height: 15rem;
-  flex-shrink: 0;     
+  flex-shrink: 0;
   box-sizing: border-box;
   border: 0.6rem solid var(--ring-border);
   border-radius: 50%;
@@ -109,12 +157,14 @@ img { display: block; }
   align-items: center;
   justify-content: center;
 }
+
 .breathe-mascot {
   width: 8.7rem;
   height: 5rem;
-  margin-top: 0;       
+  margin-top: 0;
   object-fit: contain;
 }
+
 .breathe-text {
   margin-top: 0.85rem;
   font-family: 'Outfit', 'Poppins', sans-serif;
@@ -123,6 +173,7 @@ img { display: block; }
   line-height: 1.2;
   color: var(--text-color);
 }
+
 .breathe-dots {
   font-family: 'Outfit', 'Poppins', sans-serif;
   font-size: 1rem;
@@ -142,4 +193,109 @@ img { display: block; }
   border-radius: 1.1rem;
   font-size: 0.8rem;
   font-weight: 500;
+}
+
+/* start responsivee */
+
+@media (max-width: 1400px) {
+  .stage {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .stage {
+    margin: 10rem 0 0 0;
+  }
+
+  .char {
+    width: clamp(120px, 8vw, 145px); /*min, ideal, max*/
+    height: auto;
+  }
+
+  .char-Pink {
+    left: 88%;
+    top: 22rem;
+  }
+
+  .char-Green {
+    left: 21%;
+    top: 28rem;
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .stage {
+    margin-top: 1rem;
+  }
+  .Cloud-pace {
+    height: 18rem;
+    bottom: -2rem;
+  }
+
+  .breathe {
+    margin-left: -6.5rem;
+    top: 8rem;
+  }
+
+  .breathe,
+  .breathe-ring {
+    width: 13rem;
+    height: 13rem;
+  }
+
+  .breathe-inner {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .breathe-mascot {
+    width: 5rem;
+    height: 3rem;
+  }
+
+  .breathe-text {
+    font-size: 1rem;
+  }
+
+  .char {
+    height: auto;
+  }
+
+  .char-yellow {
+    left: 10%;
+    top: 7rem;
+    width: 3rem;
+  }
+
+  .char-Blue {
+    left: 84%;
+    top: 6rem;
+    width: 4.5rem;
+  }
+
+  .char-Red {
+    left: 10%;
+    top: 19rem;
+    width: 3.5rem;
+  }
+
+  .char-Pink {
+    left: 89%;
+    top: 20rem;
+    width: 4.5rem;
+  }
+
+  .char-Green {
+    left: 17%;
+    top: 27rem;
+    width: 3rem;
+  }
+
+  .btn-exercise {
+    top: 25rem;
+  }
 }

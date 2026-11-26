@@ -8,18 +8,20 @@ function splitLetters(el) {
 document.querySelectorAll(".rainbow-text").forEach(splitLetters);
 
 // khusus navbar: pindah active
-const navLinks = document.querySelectorAll(".nav-link");
-navLinks.forEach((link) => {
+const navLinkItem = document.querySelectorAll(".nav-link");
+navLinkItem.forEach((link) => {
   link.addEventListener("click", () => {
-    navLinks.forEach((l) => l.classList.remove("active"));
+    navLinkItem.forEach((l) => l.classList.remove("active"));
     link.classList.add("active");
   });
 });
+
+
 // js accordian
 const accordians = document.querySelectorAll('.accordian');
 
 accordians.forEach(accordian => {
-  const icon = accordian.querySelector('#icon');
+  const icon = accordian.querySelector('#arrow');
   const answer = accordian.querySelector('.answer');
 
   accordian.addEventListener('click', () => {
@@ -57,29 +59,5 @@ gsap.from("#hero-title", {
 });
 
 // about
-const pill = gsap.timeline({
-  opacity:0,
-  duration:2,
-  ScrollTrigger: {
-    trigger: "#about",
-    start:"top",
-    end:"+-1500",
-    scrub:true,
-    pin:true
-  },
-});
-pill 
-.from("#mood-pill", {
-  opacity:0, y:85, scale:0.8
-})
-.from("#thoughts-pill", {
-  opacity:0, y:85, scale:0.8
-})
-.from("#noise-pill", {
-  opacity:0, y:85, scale:0.8
-})
-.from("#pace-pill", {
-  opacity:0, y:85, scale:0.8
-});
 
 

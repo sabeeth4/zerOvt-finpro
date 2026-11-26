@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id" class="page-thoughts">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,21 +10,12 @@
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/thoughts.css">
 
-  <style>
-    html.page-thoughts {
-      font-size: min(calc(100vw / 48.875), calc(100vh / 31.75), 30px) !important;
-    }
-
-    html.page-thoughts .char-yellow-thoughts {
-      top: 24.4rem;
-    }
-  </style>
 </head>
 <body>
   <nav id="navbar" data-variant="feature"></nav>
   <main class="stage">
 
-    <h1 class="title">Zero-thought</h1>
+    <h1 class="title">Zero-thoughts</h1>
     <p class="desc">
       Dump all the random scenarios spinning in your head right now. No filter needed...
     </p>
@@ -53,60 +44,21 @@
 
   <div class="popup" id="emptyPopup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
     <div class="popup-box">
-      <h2 class="popup-title" id="popupTitle">Your paper is still empty</h2>
+      <h2 class="popup-title" id="popupTitle"><span style="color: var(--color-yellow);">Your</span> <span style="color: var(--color-green);">paper</span> <span style="color: var(--color-blue);">is</span> <span style="color: var(--color-pink);">still</span> <span style="color: var(--color-yellow);">empty</span></h2>
       <p class="popup-text">Write down what's on your mind first, then let it fly away.</p>
       <button class="popup-btn" id="popupClose" type="button">Okay</button>
     </div>
   </div>
 
+  <div class="popup" id="donePopup" role="dialog" aria-modal="true" aria-labelledby="doneTitle">
+  <div class="popup-box">
+    <h2 class="popup-title" id="doneTitle"><span style="color: var(--color-yellow);">You</span> <span style="color: var(--color-green);">did</span> <span style="color: var(--color-blue);">well</span> <span style="color: var(--color-pink);">today</span></h2>
+    <p class="popup-text">Thank you for sharing your story. Your paper has flown away, carrying your thoughts with it.</p>
+    <button class="popup-btn" id="doneClose" type="button">Okay</button>
+  </div>
+</div>
+
   <script src="js/navbar.js"></script>
-  <script>
-    // hitung si jumlah huruf
-    const input = document.getElementById('thought');
-    const count = document.getElementById('count');
-
-    function updateCount() {
-      count.textContent = String(input.value.length).padStart(3, '0') + '/300';
-    }
-    input.addEventListener('input', updateCount);
-    updateCount();
-
-    // pesawat sama kertas kosong
-    const finishBtn  = document.querySelector('.btn-finish');
-    const plane      = document.getElementById('plane');
-    const popup      = document.getElementById('emptyPopup');
-    const popupClose = document.getElementById('popupClose');
-
-    function openPopup()  { popup.classList.add('show'); popupClose.focus(); }
-    function closePopup() { popup.classList.remove('show'); input.focus(); }
-
-    finishBtn.addEventListener('click', function () {
-      if (plane.classList.contains('fly')) return; 
-
-      if (input.value.trim() === '') {
-        openPopup();
-        return;
-      }
-
-      plane.classList.add('fly');
-      finishBtn.disabled = true;
-
-      input.value = '';
-      updateCount();      
-
-    });
-
-    plane.addEventListener('animationend', function () {
-      plane.classList.remove('fly');
-      finishBtn.disabled = false;
-    });
-
-    popupClose.addEventListener('click', closePopup);
-    popup.addEventListener('click', function (e) { if (e.target === popup) closePopup(); });
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && popup.classList.contains('show')) closePopup();
-    });
-  </script>
-
+  <script src="js/thoughts.js"></script>
 </body>
 </html>

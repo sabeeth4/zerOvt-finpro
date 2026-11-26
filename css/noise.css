@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
-
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html, body { width: 100%; height: 100%; overflow: hidden; }
 a   { text-decoration: none; color: inherit; }
@@ -15,7 +13,6 @@ img { display: block; }
 }
 .btn:active { transform: scale(.97); }
 
-/*  halaman audio  */
 html {
   font-size: min(calc(100vw / 48.875), calc(100vh / 31.75), 30px);
 }
@@ -39,20 +36,17 @@ body {
   margin-top: 0;
 }
 
-/* judul */
 .audio-title {
   position: absolute;
   left: 2.4rem;
   top: 3rem;
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   font-weight: 500;
   line-height: 1.7rem;
   white-space: nowrap;
-  color: var(--text-color, #2B2B34);
   z-index: 4;
 }
 
-/* deretan 4 kartu */
 .audio-list {
   position: absolute;
   left: 2.4rem;
@@ -68,7 +62,6 @@ body {
   width: 9.8rem;
 }
 
-/* gambar + teks di atasnya */
 .audio-thumb {
   position: relative;
   width: 9.875rem;
@@ -82,7 +75,6 @@ body {
   object-fit: cover;
 }
 
-/* tombol Start audio */
 .btn-audio {
   gap: 0.35rem;
   width: 5.9rem;
@@ -143,4 +135,108 @@ body {
   width: 100%;
   height: 100%;
   object-fit: fill;
+}
+
+
+/* start resp */
+
+@media (max-width: 1024px) {
+  html, body {
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .stage {
+    width: 100%;
+    height: auto;
+    padding: 3rem 2rem 13rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+    row-gap: 1rem;
+  }
+
+  .audio-title,
+  .audio-list,
+  .audio-tagline,
+  .char-audio {
+    position: static;
+  }
+
+  .audio-title {
+    flex: 0 0 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .audio-list {
+    flex: 0 0 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 14rem);
+    justify-content: center;
+    gap: 1.8rem 2rem;
+  }
+
+  .audio-card,
+  .audio-thumb {
+    width: 14rem;
+  }
+
+  .audio-thumb {
+    height: 14rem;
+    border-radius: 1.2rem;
+  }
+
+  .btn-audio {
+    width: 8.5rem;
+    height: 2.5rem;
+    margin-top: 1rem;
+    border-radius: 1.25rem;
+    font-size: 0.85rem;
+    gap: 0.5rem;
+  }
+
+  .btn-audio .icon-play {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
+  .audio-tagline {
+    flex: 0 0 100%;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .char-audio {
+    transform: rotate(var(--tilt, 0deg));
+    height: auto;
+    margin-top: 1rem;
+  }
+
+  .char-Red-audio    { width: 4.5rem; }
+  .char-Green-audio  { width: 3.2rem; }
+  .char-Pink-audio   { width: 4.2rem; }
+  .char-yellow-audio { width: 4.5rem; }
+  .char-Blue-audio   { width: 5.5rem; }
+
+  .clouds {
+    height: 30rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stage {
+    padding-top: 5rem;  
+    padding-bottom: 7rem;
+  }
+
+  .char-audio {
+    margin-top: 3.5rem;
+  }
 }

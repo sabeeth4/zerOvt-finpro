@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" class="fit">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mood Checker</title>
+    <link rel="icon" type="image/x-icon" href="assets/zerOvt.png">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/mood.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
 </head>
+
 <body>
     <nav id="navbar" data-variant="feature"></nav>
     <main class="mood-section">
-        <h1 class="mood-title">how was your day?</h1>
+
+        <!-- bg bawah -->
+        <div class="clouds" aria-hidden="true">
+            <img class="Cloud-pace" src="assets/Cloud-pace.png" alt="Cloud Background">
+        </div>
+
+        <h1 class="mood-title"><span style="color: var(--color-yellow);">how</span> <span style="color: var(--color-green);">was</span> <span style="color: var(--color-blue);">your</span> <span style="color: var(--color-pink);">day?</span></h1>
 
         <div class="mood-list">
-
-            <!-- bg bawah -->
-            <div class="clouds" aria-hidden="true">
-                <img class="Cloud-pace" src="assets/Cloud-pace.png" alt="Cloud Background">
-            </div>
 
             <!-- card mood -->
             <button class="mood-card" data-mood="overthinking">
@@ -47,9 +51,10 @@
             </button>
 
         </div>
-  </main>
-  <script src="js/navbar.js"></script>
-  <script src="js/mood-data.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </main>
+    <script src="js/navbar.js"></script>
+    <script src="js/mood-data.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
+
 </html>

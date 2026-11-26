@@ -23,6 +23,14 @@ html.fit {
   font-size: min(16px, calc((100vh - 80px) / 35.125));
 }
 
+/* warna selang seling */
+.rainbow-text span:nth-child(5n + 1) { color: var(--color-yellow); }
+.rainbow-text span:nth-child(5n + 2) { color: var(--color-green); }
+.rainbow-text span:nth-child(5n + 3) { color: var(--color-pink); }
+.rainbow-text span:nth-child(5n + 4) { color: var(--color-blue); }
+.rainbow-text span:nth-child(5n + 5) { color: var(--color-red); }
+
+
 #navbar {
   width: 100%;
   flex-shrink: 0;

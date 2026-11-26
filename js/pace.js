@@ -16,17 +16,17 @@ async function startExercise() {
     breathText.textContent = "Breathe In";
     outerCircle.style.transition = "transform 4s ease-in-out";
     outerCircle.style.transform = "scale(1.25)";
-    await wait(4);
+    await wait(3);
 
     // 2. Tahan: ukuran tetap
     breathText.textContent = "Hold";
-    await wait(3);
+    await wait(2);
 
     // 3. Buang napas: lingkaran mengecil
     breathText.textContent = "Breathe Out";
     outerCircle.style.transition = "transform 4s ease-in-out";
     outerCircle.style.transform = "scale(1)";
-    await wait(4);
+    await wait(3);
 
     // 4. diem bentar
     breathText.textContent = "u r doing great!";

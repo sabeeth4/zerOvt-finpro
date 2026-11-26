@@ -24,6 +24,12 @@ body {
   justify-content: center;
   gap: 40px;
   padding: 40px 20px;
+  position: relative;
+}
+.mood-title,
+.mood-list {
+  position: relative;
+  z-index: 2;
 }
 .clouds {
   position: absolute;
@@ -112,7 +118,7 @@ body {
   background: var(--text-color);
   color: var(--bg-color);
   border: none;
-  border-radius: 999px;
+  border-radius: 1rem;
   padding: 0.35rem 1rem;
   font-size: 0.75rem;
   font-weight: 700;
@@ -173,4 +179,167 @@ body {
   right: 0;
   bottom: 0;
   width: 7rem;
+}
+
+
+
+/* start responsivee */
+
+/* macbook */
+@media (max-width: 1400px) {
+  .mood-title {
+    font-size: 42px;
+  }
+
+  .mood-list {
+    gap: 16px;
+  }
+
+  .mood-card {
+    width: 140px;
+    height: 155px;
+  }
+
+  .mood-card img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .Cloud-pace {
+    height: 19rem;
+  }
+
+  .zero-popup {
+    width: 38rem;
+  }
+}
+
+/* ipad */
+@media (max-width: 1024px) {
+  .mood-section {
+    gap: 28px;
+    padding: 32px 16px 280px;
+  }
+
+  .mood-title {
+    margin-top: 8rem;
+    font-size: 34px;
+  }
+
+  .mood-list {
+    margin-top: 3rem;
+    max-width: 520px;
+    gap: 2rem;
+  }
+
+  .mood-card {
+    width: 150px;
+    height: 160px;
+  }
+
+  .Cloud-pace {
+    height: 30rem;
+  }
+
+  .zero-popup {
+    width: 32rem;
+    padding: 1.2rem 1.5rem 1.8rem;
+    border-radius: 32px;
+  }
+
+  .pop-text {
+    font-size: 1.1rem;
+  }
+
+  .zero-btns {
+    padding-right: 6.5rem;
+  }
+
+  .zero-btn {
+    flex: 1;
+    width: auto;
+    height: 5.5rem;
+    font-size: 0.95rem;
+    border-radius: 28px;
+  }
+
+  .pop-mascot {
+    width: 5.5rem;
+  }
+}
+
+/* hp */
+@media (max-width: 480px) {
+  .mood-section {
+    padding: 1.5rem 12px 0;    
+    justify-content: flex-start;  
+    min-height: auto;           
+  }
+
+  .mood-title {
+    margin: 0 0 1.5rem;       
+    font-size: 28px;
+  }
+
+  .mood-list {
+    gap: 12px;
+    padding-bottom: 10rem;        
+  }
+
+  .mood-card {
+    width: calc(50% - 6px);
+    max-width: 130px;
+    height: 130px;
+  }
+
+  .mood-card img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .Cloud-pace {
+    height: 20rem;
+  }
+
+  .zero-popup {
+    padding: 1rem 1rem 1.4rem;
+    border-radius: 24px;
+  }
+
+  .pop-text {
+    font-size: 0.95rem;
+    margin: 1rem 0;
+  }
+
+  .pop-label {
+    font-size: 0.9rem;
+  }
+
+  .zero-btns {
+    gap: 0.5rem;
+  }
+
+  .zero-btn {
+    flex: 1;
+    white-space: nowrap;
+    width: 4.5rem;
+    height: 4.5rem;
+    font-size: 0.6rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 0 var(--text-color);
+  }
+
+  .zero-btn:hover {
+    box-shadow: 0 6px 0 var(--text-color);
+  }
+
+  .zero-btn:active {
+    box-shadow: 0 0 0 var(--text-color);
+  }
+
+  .pop-mascot {
+    display: flex;
+    margin: 1rem auto 0;
+    width: 5rem;
+  }
 }
